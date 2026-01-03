@@ -1,7 +1,15 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom'; 
 import { ChevronRight, BarChart2, Zap } from 'lucide-react';
 
 const Hero = () => {
+  const navigate = useNavigate(); 
+
+  // Fungsi tunggal untuk mengarahkan ke form login/auth
+  const handleAuth = () => {
+    navigate('/login');
+  };
+
   return (
     <section className="min-h-screen flex items-center justify-center bg-slate-950 px-4 relative overflow-hidden">
       {/* Background Ornaments - Efek Grid & Glow */}
@@ -43,12 +51,20 @@ const Hero = () => {
           data-aos-delay="500"
           className="flex flex-col sm:flex-row items-center justify-center gap-6"
         >
-          <button className="group relative px-10 py-4 bg-indigo-600 text-white font-black rounded-2xl shadow-[0_0_40px_rgba(79,70,229,0.4)] hover:bg-indigo-500 transition-all duration-300 hover:scale-105 active:scale-95 flex items-center gap-2 uppercase tracking-wider">
+          {/* Tombol Mulai Berburu - Terkoneksi ke Login */}
+          <button 
+            onClick={handleAuth}
+            className="group relative px-10 py-4 bg-indigo-600 text-white font-black rounded-2xl shadow-[0_0_40px_rgba(79,70,229,0.4)] hover:bg-indigo-500 transition-all duration-300 hover:scale-105 active:scale-95 flex items-center gap-2 uppercase tracking-wider"
+          >
             Mulai Berburu Sekarang
             <ChevronRight className="group-hover:translate-x-1 transition-transform" />
           </button>
           
-          <button className="px-10 py-4 bg-slate-900/50 text-slate-200 font-bold rounded-2xl border border-white/10 hover:bg-slate-800 transition-all duration-300 flex items-center gap-2 backdrop-blur-md">
+          {/* Tombol Lihat Dashboard - Sekarang juga Terkoneksi ke Login */}
+          <button 
+            onClick={handleAuth}
+            className="px-10 py-4 bg-slate-900/50 text-slate-200 font-bold rounded-2xl border border-white/10 hover:bg-slate-800 transition-all duration-300 flex items-center gap-2 backdrop-blur-md hover:scale-105 active:scale-95"
+          >
             <BarChart2 size={20} className="text-indigo-400" />
             Lihat Dashboard
           </button>
