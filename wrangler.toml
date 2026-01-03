@@ -1,0 +1,12 @@
+{
+  "name": "ai-signal-api",
+  "main": "worker/index.js",
+  "compatibility_date": "2026-01-01",
+  "assets": {
+    /* Jika ini hanya API (Worker), arahkan directory ke folder kosong 
+       atau folder 'dist' jika kamu menggabungkan dengan Frontend.
+    */
+    "directory": "./dist", 
+    "binding": "ASSETS"
+  }
+}

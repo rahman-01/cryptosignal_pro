@@ -1,0 +1,60 @@
+{
+  "name": "blue-hat-1021",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "main": "worker/index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "npm run build && vite preview",
+    "deploy": "npm run build && wrangler deploy",
+    "api": "node worker/index.js"
+  },
+  "dependencies": {
+    "@tailwindcss/postcss": "^4.1.18",
+    "aos": "^2.3.4",
+    "axios": "^1.13.2",
+    "chart.js": "^4.5.1",
+    "clsx": "^2.1.1",
+    "cors": "^2.8.5",
+    "express": "^5.2.1",
+    "lucide-react": "^0.562.0",
+    "react": "^19.1.1",
+    "react-chartjs-2": "^5.3.1",
+    "react-dom": "^19.1.1",
+    "react-hot-toast": "^2.6.0",
+    "react-router-dom": "^7.11.0",
+    "recharts": "^3.6.0",
+    "tailwind-merge": "^3.4.0"
+  },
+  "devDependencies": {
+    "@cloudflare/vite-plugin": "^1.19.0",
+    "@eslint/js": "^9.33.0",
+    "@types/react": "^19.1.10",
+    "@types/react-dom": "^19.1.7",
+    "@vitejs/plugin-react": "^5.0.0",
+    "autoprefixer": "^10.4.23",
+    "eslint": "^9.33.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.20",
+    "globals": "^16.3.0",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.18",
+    "vite": "^7.1.2",
+    "wrangler": "^4.54.0"
+  },
+  "description": "Vite + React frontend with Express REST API backend",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rahman-01/blue-hat-1021.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rahman-01/blue-hat-1021/issues"
+  },
+  "homepage": "https://github.com/rahman-01/blue-hat-1021#readme"
+}

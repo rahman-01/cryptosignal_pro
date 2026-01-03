@@ -1,0 +1,164 @@
+@import "tailwindcss";
+
+@theme {
+  /* Mendaftarkan font yang tadi kita panggil di index.html */
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, -apple-system, sans-serif;
+}
+
+/* Mengatur dasar tampilan agar lebih halus */
+body {
+  font-family: var(--font-sans);
+  background-color: #020617; /* Warna slate-950 agar tidak putih saat loading */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* src/App.css */
+:root {
+  --bg-dark: #0f172a;
+  --panel: #1e293b;
+  --text-main: #f8fafc;
+  --text-sec: #94a3b8;
+  --accent-blue: #3b82f6;
+  --accent-green: #10b981;
+  --accent-red: #ef4444;
+  --border: #334155;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.app-container {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.header h1 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.badge {
+  font-size: 0.8rem;
+  background: var(--accent-blue);
+  padding: 2px 8px;
+  border-radius: 4px;
+  vertical-align: middle;
+}
+
+.btn-analyze {
+  background: linear-gradient(135deg, var(--accent-blue), #2563eb);
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.btn-analyze:hover { opacity: 0.9; }
+.btn-analyze:disabled { background: var(--text-sec); cursor: not-allowed; }
+
+.dashboard {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+}
+
+@media (max-width: 900px) {
+  .dashboard { grid-template-columns: 1fr; }
+}
+
+.card {
+  background-color: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+.card h2, .card h3 {
+  margin-top: 0;
+  font-weight: 600;
+  color: var(--text-sec);
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+.chart-wrapper {
+  height: 400px;
+  position: relative;
+}
+
+.ai-card {
+  text-align: center;
+  transition: border-color 0.3s;
+}
+
+.signal-box h1 {
+  font-size: 3rem;
+  margin: 10px 0;
+  text-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+.stats-list {
+  list-style: none;
+  padding: 0;
+}
+
+.stats-list li {
+  padding: 10px;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  display: flex;
+  justify-content: space-between;
+}
+
+.stats-list li:last-child { border-bottom: none; }
+.stats-list .bull { color: var(--accent-green); }
+.stats-list .bear { color: var(--accent-red); }
+
+.control-group {
+  margin-bottom: 15px;
+}
+
+.control-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 0.85rem;
+  color: var(--text-sec);
+}
+
+.control-group input {
+  width: 100%;
+  cursor: pointer;
+}
+
+.btn-apply {
+  width: 100%;
+  background: var(--border);
+  color: var(--text-main);
+  border: none;
+  padding: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-apply:hover { background: #475569; }
